@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante el Hambriento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurante El Hambriento</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="productos">
+            <h2>Menú</h2>
+            <div class="producto">
+                <h3>Hamburguesa</h3>
+                <p>Deliciosa hamburguesa con queso, lechuga y tomate.</p>
+                <span>Precio: Bs5.00</span>
+                <button onclick="agregarAlCarrito('Hamburguesa', 5.00)">Agregar</button>
+            </div>
+            <div class="producto">
+                <h3>Papas Fritas</h3>
+                <p>Papas fritas crujientes y doradas.</p>
+                <span>Precio: Bs2.00</span>
+                <button onclick="agregarAlCarrito('Papas Fritas', 2.00)">Agregar</button>
+            </div>
+            <div class="producto">
+                <h3>Bebida</h3>
+                <p>Bebida refrescante de tu elección.</p>
+                <span>Precio: Bs1.50</span>
+                <button onclick="agregarAlCarrito('Bebida', 1.50)">Agregar</button>
+            </div>
+        </section>
+        <section id="pedido">
+            <h2>Realiza tu pedido</h2>
+            <form id="formulario-pedido" onsubmit="return realizarPedido(event)">
+                <h3>Carrito</h3>
+                <ul id="carrito"></ul>
+                <strong>Total: <span id="total">Bs 0.00</span></strong>
+                <button type="submit">Ordenar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Contacto: info@restauranterapido.com</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
